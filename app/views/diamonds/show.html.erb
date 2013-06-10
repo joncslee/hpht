@@ -1,0 +1,88 @@
+<div class="diamond">
+  <div class="row">
+    <div class="large-10 large-centered columns">
+      <h1><%= @diamond.name %></h1>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="large-10 large-centered columns">
+      <div class="row">
+        <div class="large-6 columns">
+          <%= image_tag 'test_diamond.jpg', :class => 'diamond-photo' %>
+          <p><%= @diamond.description %></p>
+        </div>
+
+        <div class="large-6 columns">
+          <div class="price">
+            <%= number_to_currency @diamond.price %>
+          </div>
+
+          <ul class="data">
+            <li>
+              <strong>Weight:</strong>
+              <%= @diamond.weight %>ct
+            </li>
+            <li>
+              <strong>Quantity:</strong>
+              <%= @diamond.quantity %>
+            </li>
+            <li>
+              <strong>Shape:</strong>
+              <%= @diamond.shape %>
+            </li>
+            <li>
+              <strong>Color:</strong>
+              <%= @diamond.color %>
+            </li>
+            <li>
+              <strong>Clarity:</strong>
+              <%= @diamond.clarity %>
+            </li>
+            <li>
+              <strong>Measurements:</strong>
+              <%= @diamond.measurements %>
+            </li>
+            <li>
+              <strong>Total Depth:</strong>
+              <%= @diamond.total_depth %>%
+            </li>
+            <li>
+              <strong>Table Size:</strong>
+              <%= @diamond.table_size %>%
+            </li>
+            <li>
+              <strong>Polish:</strong>
+              <%= @diamond.polish %>
+            </li>
+            <li>
+              <strong>Symmetry:</strong>
+              <%= @diamond.symmetry %>
+            </li>
+            <li>
+              <strong>Flourescence:</strong>
+              <%= @diamond.flourescence %>
+            </li>
+            <li>
+              <strong>GIA Report #:</strong>
+              <%= @diamond.gia_report_number %>
+            </li>
+          </ul>
+
+          <div class="panel callout">
+            <div class="header">Interested?</div>  
+            <p>Give us a call at (213) 623-1537 or send us an email at info@hphtdiamonds.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row certificate">
+    <div class="large-10 large-centered columns">
+      <h2>GIA Certificate</h2>
+      <%= image_tag 'test_cert.jpg' %>
+    </div>
+  </div>
+</div>

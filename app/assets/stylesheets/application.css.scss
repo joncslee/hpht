@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+@import "foundation_and_overrides.scss";
+@import 'compass';
+
+.pink { color: #ff75ea; }
+.yellow { color: #fcfa4a; }
+.green { color: #4de910; }
+.purple { color: #b227ec; }
+.orange { color: #f5be47; }
+
+ol {
+  list-style-position: inside;
+}
+ 
+nav.top-bar {
+  margin-bottom: 0;
+  img {
+    margin: 15px 0 0 15px;
+  }
+  .top-bar-section li a:not(.button):hover {
+    background: #088299;
+  }
+  .top-bar-section ul li.active a {
+    background: #00768c;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+  font-family: 'Raleway';
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.2em;
+  .landing & {
+    margin-top: 60px;
+  }
+  .diamond & {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+section.content {
+  background-image: url("glow_bg.png"), url("rainbow_banner.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom; 
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 140px;
+}
+
+.gems {
+  @extend .hide-for-small; 
+  text-align: center;
+  padding-top: 90px;
+}
+
+.highlights {
+  margin-top: 60px;
+}
+
+.highlight {
+  text-align: center;
+  border-bottom: 2px solid #989898;
+  border-top: 2px solid #989898;
+  padding: 20px 10px;
+  p {
+    margin: 0;
+  }
+}
+
+.process {
+  margin-top: 50px;
+}
+img.process-img {
+  background: none repeat scroll 0 0 #EDEDED;
+  padding: 5px;
+}
+
+.faq {
+  margin-top: 50px;
+  dt {
+    font-family: 'Raleway';
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  dd {
+    margin-bottom: 30px;
+  }
+}
+
+.diamond {
+  .price {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  ul.data {
+    margin-bottom: 20px;
+    li {
+      list-style-type: none;
+    }
+  }
+  .panel {
+    .header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.2em;
+    }
+  }
+}
+
+img.diamond-photo {
+  width: 700px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: white;
+}
+
+footer {
+  padding: 20px 0 40px;
+  background-color: $primary-color;
+  text-align: center;
+  p {
+    font-size: 0.9em;
+  }
+}

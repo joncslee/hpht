@@ -1,0 +1,14 @@
+
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Our Diamonds</h1>
+    <ul class="large-block-grid-4">
+      <% for diamond in @diamonds %>
+        <li>
+          <%= link_to (image_tag 'test_diamond.jpg', :class => 'diamond-photo'), diamond %><br />
+          <%= link_to diamond.name, diamond %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
