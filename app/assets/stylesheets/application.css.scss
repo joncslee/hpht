@@ -106,6 +106,20 @@ img.process-img {
   }
 }
 
+.diamonds {
+  .tag {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    text-align: center;
+    a {
+      color: #a2a2a2;
+    }
+    .price {
+      font-weight: bold;
+    }
+  }
+}
+
 .diamond {
   .price {
     font-weight: bold;
@@ -131,12 +145,14 @@ img.process-img {
 
 img.diamond-photo {
   width: 700px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 5px;
   background-color: white;
 }
 
 footer {
+  height: 100px;
+  border-top: 2px solid #0088a1;
   padding: 20px 0 40px;
   background-color: $primary-color;
   text-align: center;

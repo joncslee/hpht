@@ -2,11 +2,15 @@
 <div class="row">
   <div class="large-12 columns">
     <h1>Our Diamonds</h1>
-    <ul class="large-block-grid-4">
+    <ul class="large-block-grid-4 small-block-grid-2 diamonds">
       <% for diamond in @diamonds %>
         <li>
-          <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond %><br />
-          <%= link_to diamond.name, diamond %></li>
+          <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond %>
+          <div class="tag">
+            <%= link_to diamond.name, diamond %><br />
+            <span class="price">Price: <%= number_to_currency diamond.price %></span>
+          </div>
+        </li>
       <% end %>
     </ul>
   </div>
