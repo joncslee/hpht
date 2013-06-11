@@ -10,7 +10,7 @@
     <div class="large-10 large-centered columns">
       <div class="row">
         <div class="large-6 columns">
-          <%= image_tag 'test_diamond.jpg', :class => 'diamond-photo' %>
+          <%= image_tag @diamond.photo.large, :class => 'diamond-photo' %>
           <p><%= @diamond.description %></p>
         </div>
 
@@ -82,7 +82,7 @@
   <div class="row certificate">
     <div class="large-10 large-centered columns">
       <h2>GIA Certificate</h2>
-      <%= image_tag 'test_cert.jpg' %>
+      <%= image_tag @diamond.certificate %>
     </div>
   </div>
 </div>

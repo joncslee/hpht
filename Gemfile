@@ -48,5 +48,8 @@ end
 # gem 'debugger'
 
 gem 'activeadmin'
+gem 'carrierwave'
+gem 'fog', '~> 1.3.1'
+gem 'rmagick'
 
 gem "mocha", :group => :test
