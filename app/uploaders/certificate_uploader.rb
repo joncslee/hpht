@@ -41,7 +41,7 @@ class CertificateUploader < CarrierWave::Uploader::Base
   version :main do
     process :resize_to_fit => [803, 10000]
     process :convert => 'png' 
-    def full_filename (for_file = model.logo.file) 
+    def full_filename (for_file = model.certificate.file) 
       "certificate.png" 
     end 
   end
@@ -55,7 +55,7 @@ class CertificateUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "certificate_original.#{model.logo.file.extension}" if original_filename 
+    "certificate_original.#{model.certificate.file.extension}" if original_filename 
   end
 
 end

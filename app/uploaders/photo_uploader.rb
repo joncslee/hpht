@@ -41,14 +41,14 @@ class PhotoUploader < CarrierWave::Uploader::Base
   version :small do
     process :resize_to_fit => [228, 10000]
     process :convert => 'png' 
-    def full_filename (for_file = model.logo.file) 
+    def full_filename (for_file = model.photo.file) 
       "photo_small.png" 
     end 
   end
   version :large do
     process :resize_to_fit => [387, 10000]
     process :convert => 'png' 
-    def full_filename (for_file = model.logo.file) 
+    def full_filename (for_file = model.photo.file) 
       "photo_large.png" 
     end 
   end
@@ -63,7 +63,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "photo_original.#{model.logo.file.extension}" if original_filename 
+    "photo_original.#{model.photo.file.extension}" if original_filename 
   end
 
 end
