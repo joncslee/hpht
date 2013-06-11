@@ -1,6 +1,10 @@
+
 <div class="diamond">
   <div class="row">
     <div class="large-10 large-centered columns">
+      <div class="crumbs">
+        <%= link_to 'Diamonds', '/diamonds', :title => 'View All Diamonds' %> / <span><%= @diamond.name %></span>
+      </div>
       <h1><%= @diamond.name %></h1>
     </div>
   </div>
