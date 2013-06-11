@@ -53,7 +53,7 @@ end
 # To use debugger
 # gem 'debugger'
 
-gem 'activeadmin'
+gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
 gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'rmagick'
