@@ -24,7 +24,7 @@ ActiveAdmin.register Diamond do
       f.input :table_size, :label => "Table Size (percentage)"
       f.input :polish
       f.input :symmetry
-      f.input :flourescence
+      f.input :fluorescence
       f.input :gia_report_number, :label => "GIA Report Number"
       f.input :photo
       f.input :certificate
