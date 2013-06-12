@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611015033) do
+ActiveRecord::Schema.define(:version => 20130612200139) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20130611015033) do
     t.float    "table_size"
     t.string   "polish"
     t.string   "symmetry"
-    t.string   "flourescence"
+    t.string   "fluorescence"
     t.string   "gia_report_number"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
