@@ -13,6 +13,12 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <% if has_content_for(:title) %>
+      <title><%= yield(:title) %> | HPHT Diamonds</title>
+    <% else %>
+      <title>HPHT Diamonds | Working With Nature</title>
+    <% end %>
+    
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
@@ -33,10 +39,10 @@
         <ul class="right">
           <li class="divider hide-for-small"></li>
           <li <% if params[:controller] == 'pages' && params[:action] == 'landing' %>class="active"<% end %>><a href="/">Home</a></li>
-          <!-- <li class="divider hide-for-small"></li> --> 
-          <!-- <li <% if params[:controller] == 'diamonds' %>class="active"<% end %>><a href="/diamonds">Diamonds</a></li> -->
+          <!-- <li class="divider hide-for-small"></li> -->
+          <!-- <li <% if params[:controller] == 'diamonds' %>class="active"<% end %>><a href="/diamonds">Our Diamonds</a></li> -->
           <li class="divider hide-for-small"></li>
-          <li <% if params[:controller] == 'pages' && params[:action] == 'the_process' %>class="active"<% end %>><a href="/process">Process</a></li>
+          <li <% if params[:controller] == 'pages' && params[:action] == 'the_process' %>class="active"<% end %>><a href="/process">The Process</a></li>
           <li class="divider hide-for-small"></li>
           <li <% if params[:controller] == 'pages' && params[:action] == 'faq' %>class="active"<% end %>><a href="/faq">FAQ</a></li>
         </ul>
