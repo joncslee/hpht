@@ -15,63 +15,105 @@
       <div class="row">
         <div class="large-6 columns">
           <%= image_tag @diamond.photo.large, :class => 'diamond-photo' %>
-          <p><%= @diamond.description %></p>
+          <% if @diamond.description.present? %>
+            <p><%= @diamond.description %></p>
+          <% end %>
         </div>
 
         <div class="large-6 columns">
+
           <div class="price">
-            <%= number_to_currency @diamond.price %>
+            <% if @diamond.price.present? %>
+              <%= number_to_currency @diamond.price %>
+            <% else %>
+              Inquire for Price
+            <% end %>
           </div>
 
           <ul class="data">
-            <li>
-              <strong>Weight:</strong>
-              <%= @diamond.weight %>ct
-            </li>
-            <li>
-              <strong>Quantity:</strong>
-              <%= @diamond.quantity %>
-            </li>
-            <li>
-              <strong>Shape:</strong>
-              <%= @diamond.shape %>
-            </li>
-            <li>
-              <strong>Color:</strong>
-              <%= @diamond.color %>
-            </li>
-            <li>
-              <strong>Clarity:</strong>
-              <%= @diamond.clarity %>
-            </li>
-            <li>
-              <strong>Measurements:</strong>
-              <%= @diamond.measurements %>
-            </li>
-            <li>
-              <strong>Total Depth:</strong>
-              <%= @diamond.total_depth %>%
-            </li>
-            <li>
-              <strong>Table Size:</strong>
-              <%= @diamond.table_size %>%
-            </li>
-            <li>
-              <strong>Polish:</strong>
-              <%= @diamond.polish %>
-            </li>
-            <li>
-              <strong>Symmetry:</strong>
-              <%= @diamond.symmetry %>
-            </li>
-            <li>
-              <strong>Flourescence:</strong>
-              <%= @diamond.flourescence %>
-            </li>
-            <li>
-              <strong>GIA Report #:</strong>
-              <%= @diamond.gia_report_number %>
-            </li>
+            <% if @diamond.weight.present? %>
+              <li>
+                <strong>Weight:</strong>
+                <%= @diamond.weight %>ct
+              </li>
+            <% end %>
+
+            <% if @diamond.quantity.present? %>
+              <li>
+                <strong>Quantity:</strong>
+                <%= @diamond.quantity %>
+              </li>
+            <% end %>
+
+            <% if @diamond.shape.present? %>
+              <li>
+                <strong>Shape:</strong>
+                <%= @diamond.shape %>
+              </li>
+            <% end %>
+
+            <% if @diamond.color.present? %>
+              <li>
+                <strong>Color:</strong>
+                <%= @diamond.color %>
+              </li>
+            <% end %>
+
+            <% if @diamond.clarity.present? %>
+              <li>
+                <strong>Clarity:</strong>
+                <%= @diamond.clarity %>
+              </li>
+            <% end %>
+
+            <% if @diamond.measurements.present? %>
+              <li>
+                <strong>Measurements:</strong>
+                <%= @diamond.measurements %>
+              </li>
+            <% end %>
+
+            <% if @diamond.total_depth.present? %>
+              <li>
+                <strong>Total Depth:</strong>
+                <%= @diamond.total_depth %>%
+              </li>
+            <% end %>
+
+            <% if @diamond.table_size.present? %>
+              <li>
+                <strong>Table Size:</strong>
+                <%= @diamond.table_size %>%
+              </li>
+            <% end %>
+
+            <% if @diamond.polish.present? %>
+              <li>
+                <strong>Polish:</strong>
+                <%= @diamond.polish %>
+              </li>
+            <% end %>
+
+            <% if @diamond.symmetry.present? %>
+              <li>
+                <strong>Symmetry:</strong>
+                <%= @diamond.symmetry %>
+              </li>
+            <% end %>
+
+            <% if @diamond.flourescence.present? %>
+              <li>
+                <strong>Flourescence:</strong>
+                <%= @diamond.flourescence %>
+              </li>
+            <% end %>
+
+            <% if @diamond.gia_report_number.present? %>
+              <li>
+                <strong>GIA Report #:</strong>
+                <%= @diamond.gia_report_number %>
+              </li>
+            <% end %>
           </ul>
 
           <div class="panel callout">
@@ -83,10 +125,12 @@
     </div>
   </div>
 
-  <div class="row certificate">
-    <div class="large-10 large-centered columns">
-      <h2>GIA Certificate</h2>
-      <%= image_tag @diamond.certificate %>
+  <% if @diamond.certificate.present? %>
+    <div class="row certificate">
+      <div class="large-10 large-centered columns">
+        <h2>GIA Certificate</h2>
+        <%= image_tag @diamond.certificate %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>

@@ -8,7 +8,13 @@
           <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond %>
           <div class="tag">
             <%= link_to diamond.name, diamond %><br />
-            <span class="price">Price: <%= number_to_currency diamond.price %></span>
+            <span class="price">
+              <% if diamond.price.present? %>
+                Price: <%= number_to_currency diamond.price %>
+              <% else %>
+                Inquire for Price
+              <% end %>
+            </span>
           </div>
         </li>
       <% end %>
