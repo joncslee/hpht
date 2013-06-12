@@ -4,7 +4,9 @@
   <div class="row">
     <div class="large-10 large-centered columns">
       <div class="crumbs">
-        <%= link_to 'Diamonds', '/diamonds', :title => 'View All Diamonds' %> / <span><%= @diamond.name %></span>
+        <%= link_to 'All Diamonds', '/diamonds', :title => 'View All HPHT Diamonds' %> / 
+        <%= link_to "#{@diamond.color_category.titleize} Diamonds", @diamond.color_category_url, :title => "#{@diamond.color_category.titleize} HPHT Diamonds" %> / 
+        <span><%= @diamond.name %></span>
       </div>
       <h1><%= @diamond.name %></h1>
     </div>

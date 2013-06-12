@@ -1,6 +1,8 @@
 Hpht::Application.routes.draw do
 
   resources :diamonds
+  match "/:color-diamonds" => "diamonds#index"
+  match "/:color-diamonds/:id" => "diamonds#show"
 
   ActiveAdmin.routes(self)
 

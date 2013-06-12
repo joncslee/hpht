@@ -1,14 +1,32 @@
-<% title 'Our Diamonds' %>
+<% if @color.present? %>
+  <% title "#{@color} Diamonds" %>
+<% else %>
+  <% title 'Our Diamonds' %>
+<% end %>
+
+<% if @color.present? %>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="crumbs">
+        <%= link_to 'All Diamonds', '/diamonds', :title => 'View All HPHT Diamonds' %> / 
+        <span><%= @color %> Diamonds</span>
+      </div>
+      <h1><%= @color %> Diamonds</h1>
+    </div>
+  </div>
+<% end %>
 
 <div class="row">
   <div class="large-12 columns">
-    <h1>Our Diamonds</h1>
+    <% unless @color.present? %>
+      <h1>Our Diamonds</h1>
+    <% end %>
     <ul class="large-block-grid-4 small-block-grid-2 diamonds">
       <% for diamond in @diamonds %>
         <li>
-          <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond %>
+          <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond, :title => diamond.name %>
           <div class="tag">
-            <%= link_to diamond.name, diamond %><br />
+            <%= link_to diamond.name, diamond, :title => diamond.name %><br />
             <span class="price">
               <% if diamond.price.present? %>
                 Price: <%= number_to_currency diamond.price %>
