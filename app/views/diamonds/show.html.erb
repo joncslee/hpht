@@ -117,6 +117,13 @@
                 <%= @diamond.gia_report_number %>
               </li>
             <% end %>
+
+            <% if @diamond.lot_number.present? %>
+              <li>
+                <strong>Lot Number:</strong>
+                <%= @diamond.lot_number %>
+              </li>
+            <% end %>
           </ul>
 
           <div class="panel callout">

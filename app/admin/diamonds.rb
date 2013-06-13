@@ -26,6 +26,7 @@ ActiveAdmin.register Diamond do
       f.input :symmetry
       f.input :fluorescence
       f.input :gia_report_number, :label => "GIA Report Number"
+      f.input :lot_number
       f.input :photo
       f.input :certificate
     end
