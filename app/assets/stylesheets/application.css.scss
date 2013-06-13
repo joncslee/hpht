@@ -15,6 +15,24 @@
 @import "foundation_and_overrides.scss";
 @import 'compass';
 
+@media only screen {
+	@for $i from 1 through $block-grid-elements {
+	  .small-block-grid-#{($i)} > li:nth-child(#{($i)}n+1) {
+      clear: left !important;
+	  }
+	}
+}
+@media #{$small} {
+  [class*="small-block-grid"][class*="large-block-grid"] > li {
+    clear: none !important;
+  }  
+	@for $i from 1 through $block-grid-elements {
+    .large-block-grid-#{($i)} > li:nth-child(#{($i)}n+1) {
+      clear: left !important;
+    }
+  }
+}
+
 .pink { color: #ff75ea; }
 .yellow { color: #fcfa4a; }
 .green { color: #4de910; }
@@ -121,6 +139,7 @@ img.process-img {
   }
 }
 
+
 .diamond {
   .price {
     font-weight: bold;
@@ -180,3 +199,4 @@ footer {
     font-family: 'Raleway';
   }
 }
+
