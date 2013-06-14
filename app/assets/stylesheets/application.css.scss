@@ -33,6 +33,19 @@
   }
 }
 
+nav.top-bar .top-bar-section>ul>li.active>a {
+  background-color: #00768C !important;
+}
+.top-bar-section>ul>li>ul>li>a:not(.button) {
+  background-color: $primary-color !important;
+}
+.top-bar-section>ul>li>ul>li>a:hover {
+  background-color: #088299 !important;
+}
+nav.top-bar .top-bar-section>ul>li.active>ul>li.active>a {
+  background-color: #00768C !important;
+}
+
 .pink { color: #ff75ea; }
 .yellow { color: #fcfa4a; }
 .green { color: #4de910; }

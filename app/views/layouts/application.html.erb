@@ -41,7 +41,14 @@
           <li class="divider hide-for-small"></li>
           <li <% if params[:controller] == 'pages' && params[:action] == 'landing' %>class="active"<% end %>><a href="/" title="HPHT Diamonds - Working With Nature">Home</a></li>
           <li class="divider hide-for-small"></li>
-          <li <% if params[:controller] == 'diamonds' %>class="active"<% end %>><a href="/diamonds" title="Our Diamonds">Our Diamonds</a></li>
+          <li <% if params[:controller] == 'diamonds' %>class="has-dropdown active"<% else %>class="has-dropdown"<% end %>>
+            <a href="/diamonds" title="Our Diamonds">Our Diamonds</a>
+            <ul class="dropdown">
+              <% COLOR_CATEGORIES.each_pair do |color, i| %>
+                <li <% if params[:color] == color %>class="active"<% end %>><%= link_to "#{color.titleize} Diamonds", "#{color.gsub(' ', '-')}-diamonds", :title => "#{color.titleize} HPHT Diamonds" %></li>
+              <% end %>
+            </ul>
+          </li>
           <li class="divider hide-for-small"></li>
           <li <% if params[:controller] == 'pages' && params[:action] == 'the_process' %>class="active"<% end %>><a href="/process" title="The HPHT Diamond Process">The Process</a></li>
           <li class="divider hide-for-small"></li>

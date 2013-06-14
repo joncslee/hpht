@@ -21,23 +21,28 @@
     <% unless @color.present? %>
       <h1>Our Diamonds</h1>
     <% end %>
-    <ul class="large-block-grid-4 small-block-grid-2 diamonds">
-      <% for diamond in @diamonds %>
-        <li>
-          <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond, :title => diamond.name %>
-          <div class="tag">
-            <%= link_to diamond.name, diamond, :title => diamond.name %><br />
-            <span class="price">
-              <% if diamond.price.present? %>
-                Price: <%= number_to_currency diamond.price %>
-              <% else %>
-                Inquire for Price
-              <% end %>
-            </span>
-          </div>
-        </li>
-      <% end %>
-    </ul>
+
+    <% if @diamonds.present? %>
+      <ul class="large-block-grid-4 small-block-grid-2 diamonds">
+        <% for diamond in @diamonds %>
+          <li>
+            <%= link_to (image_tag diamond.photo.small, :class => 'diamond-photo'), diamond, :title => diamond.name %>
+            <div class="tag">
+              <%= link_to diamond.name, diamond, :title => diamond.name %><br />
+              <span class="price">
+                <% if diamond.price.present? %>
+                  Price: <%= number_to_currency diamond.price %>
+                <% else %>
+                  Inquire for Price
+                <% end %>
+              </span>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    <% elsif @color.present? %>
+      <p>We currently have no <%= @color %> diamonds in stock, please check again later!</p>
+    <% end %>
   </div>
 </div>
 
