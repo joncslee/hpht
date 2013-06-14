@@ -33,6 +33,10 @@
   }
 }
 
+.top-bar-section .dropdown li a {
+  padding: 10px;
+}
+
 nav.top-bar .top-bar-section>ul>li.active>a {
   background-color: #00768C !important;
 }
@@ -44,6 +48,10 @@ nav.top-bar .top-bar-section>ul>li.active>a {
 }
 nav.top-bar .top-bar-section>ul>li.active>ul>li.active>a {
   background-color: #00768C !important;
+}
+
+.top-bar-section ul.right li .dropdown {
+  border-top: #0088a1 2px solid;
 }
 
 .pink { color: #ff75ea; }
