@@ -6,4 +6,4 @@ COLOR_CATEGORIES = {'white' => 'white',
                     'orange' => 'orange',
                     'blue' => 'blue',
                     'brown' => 'brown',
-                    'exotics' => 'exotics'}
+                    'exotic' => 'exotic'}

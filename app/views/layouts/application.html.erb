@@ -45,7 +45,7 @@
             <a href="/diamonds" title="Our Diamonds">Our Diamonds</a>
             <ul class="dropdown">
               <% COLOR_CATEGORIES.each_pair do |color, i| %>
-                <li <% if params[:color] == color %>class="active"<% end %>><%= link_to "#{color.titleize} Diamonds", "#{color.gsub(' ', '-')}-diamonds", :title => "#{color.titleize} HPHT Diamonds" %></li>
+                <li <% if params[:color] == color %>class="active"<% end %>><%= link_to "/#{color.titleize} Diamonds", "#{color.gsub(' ', '-')}-diamonds", :title => "#{color.titleize} HPHT Diamonds" %></li>
               <% end %>
             </ul>
           </li>
