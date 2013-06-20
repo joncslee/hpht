@@ -57,5 +57,6 @@ gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
 gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'rmagick'
+gem "friendly_id", "~> 4.0.9"
 
 gem "mocha", :group => :test
