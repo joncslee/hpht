@@ -109,7 +109,7 @@ section.content {
 .gems {
   @extend .hide-for-small; 
   text-align: center;
-  padding-top: 90px;
+  padding: 90px 0 0 0 !important;
 }
 
 .highlights {
