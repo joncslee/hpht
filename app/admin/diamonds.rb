@@ -11,6 +11,7 @@ ActiveAdmin.register Diamond do
       f.input :name
       f.input :price, :label => "Price (omit dollar signs and commas)"
       f.input :description
+      f.input :active, :label => "Is Active?"
     end
     f.inputs "Details" do
       f.input :weight, :label => "Weight in Carats"

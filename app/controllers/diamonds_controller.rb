@@ -2,10 +2,10 @@ class DiamondsController < ApplicationController
   def index
     @color = params[:color]
     if @color.present?
-      @diamonds = Diamond.where("color_category = ?", @color).order("weight DESC")
+      @diamonds = Diamond.where("color_category = ?", @color).where(active: true).order("weight DESC")
       @color = @color.titleize
     else
-      @diamonds = Diamond.order("weight DESC")
+      @diamonds = Diamond.where(active: true).order("weight DESC")
     end
   end
 

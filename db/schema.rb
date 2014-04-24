@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620133117) do
+ActiveRecord::Schema.define(:version => 20140424040543) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -61,14 +61,15 @@ ActiveRecord::Schema.define(:version => 20130620133117) do
     t.string   "symmetry"
     t.string   "fluorescence"
     t.string   "gia_report_number"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.float    "price"
     t.string   "photo"
     t.string   "certificate"
     t.string   "color_category"
     t.string   "lot_number"
     t.string   "slug"
+    t.boolean  "active",            :default => false
   end
 
   add_index "diamonds", ["slug"], :name => "index_diamonds_on_slug", :unique => true
