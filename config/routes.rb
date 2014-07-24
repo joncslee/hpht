@@ -4,6 +4,8 @@ Hpht::Application.routes.draw do
   match "/:color-diamonds" => "diamonds#index"
   match "/:color-diamonds/:id" => "diamonds#show"
 
+  resources :articles
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

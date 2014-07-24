@@ -50,6 +50,8 @@
             </ul>
           </li>
           <li class="divider hide-for-small"></li>
+          <li <% if params[:controller] == 'articles' %>class="active"<% end %>><a href="/articles" title="Articles">Articles</a></li>
+          <li class="divider hide-for-small"></li>
           <li <% if params[:controller] == 'pages' && params[:action] == 'the_process' %>class="active"<% end %>><a href="/process" title="The HPHT Diamond Process">The Process</a></li>
           <li class="divider hide-for-small"></li>
           <li <% if params[:controller] == 'pages' && params[:action] == 'faq' %>class="active"<% end %>><a href="/faq" title="The HPHT Diamond FAQ">FAQ</a></li>
