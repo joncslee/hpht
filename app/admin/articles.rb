@@ -8,7 +8,7 @@ ActiveAdmin.register Article do
   form do |f|
     f.inputs do       
       f.input :title
-      f.input :content
+      f.input :content, :as => :ckeditor, :required => true
     end
     f.actions
   end

@@ -54,6 +54,7 @@ end
 # gem 'debugger'
 
 gem "activeadmin", :git => "git://github.com/gregbell/active_admin.git"
+gem 'ckeditor'
 gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'rmagick'
