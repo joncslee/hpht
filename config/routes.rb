@@ -1,5 +1,7 @@
 Hpht::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :diamonds
   match "/:color-diamonds" => "diamonds#index"
   match "/:color-diamonds/:id" => "diamonds#show"
